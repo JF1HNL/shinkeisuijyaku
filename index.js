@@ -1,6 +1,7 @@
 // うらがわ
+console.log("流石に答えは隠して置きましたよ。")
 const table_data = random_num();
-console.log(table_data);
+// console.log(table_data);
 const result_eria = document.querySelector(".result");
 const FIRST_BASHO_RESET_OBJECT = [100];
 // 取った番号をここに入れていく
@@ -77,7 +78,6 @@ function random_num(){
         }
       }
       use_num[num - 1]++;
-      console.log(use_num);
       ret[i][j] = num;
     }
   }
