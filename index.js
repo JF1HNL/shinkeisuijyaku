@@ -11,9 +11,9 @@ let first_basho = FIRST_BASHO_RESET_OBJECT;
 let show_num_flug = false;
 
 function click_select(g){
-  if(!show_num_flug){
-    const basho = g.split("");
-    const doc = document.querySelector(".a"  + basho[1] + basho[2]);
+  const basho = g.split("");
+  const doc = document.querySelector(".a"  + basho[1] + basho[2]);
+  if(!show_num_flug && doc.textContent === ""){
     const first_doc = document.querySelector(".a"  + first_basho[1] + first_basho[2]);
     result_eria.textContent = "";
     if(get_judge(table_data[basho[1]-1][basho[2]-1])){
