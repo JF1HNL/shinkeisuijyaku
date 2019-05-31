@@ -63,9 +63,9 @@ function click_select(g){
         let judge = false;
         if(table_data[basho[1]-1][basho[2]-1] === table_data[first_basho[1]-1][first_basho[2]-1]){
           judge = true;
-          result_eria.textContent = "やったね！あってるよ！"
+          result_eria.textContent = "正解！"
         }else{
-          result_eria.textContent = "ざんねん。もういっかいチャレンジだ！"
+          result_eria.textContent = "ざんねん。"
         }
         tesuu++;
         tesuu_ele.innerText = "手数：" + tesuu;
@@ -77,7 +77,7 @@ function click_select(g){
             first_doc.src = TEMPLATE_IMG_URL.get;
             doc.src = TEMPLATE_IMG_URL.get;
             if(get_num.length == 8){
-              result_eria.textContent = "げーむくりあ！！";
+              result_eria.textContent = "ゲームクリア！";
             }
           }else{
             first_doc.src = TEMPLATE_IMG_URL.template;
