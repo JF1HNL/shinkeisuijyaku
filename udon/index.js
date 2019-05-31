@@ -26,7 +26,18 @@ const all_insta_data = [
   "BufZSUblxUQ",
   "Bua5ul6FpiD",
   "BtueRUEl0As",
-  "Btfqrf4lPAF"
+  "Btfqrf4lPAF",
+  "Btc3_-4loM-",
+  "BtSF1BDlowi",
+  "BtAR2T4FoeI",
+  "BsuFnqQFmfw",
+  "BsHjnIhFeBM",
+  "Br1hOQ8FCJt",
+  "BrjvmuXljWU",
+  "BrWdKYeFrM5",
+  "BrRWDO9lq09",
+  "BrEa7MZl7Uk",
+  "Bq1oxSpFSe4"
 ]
 const table_data = random_num();
 // console.log(table_data);
