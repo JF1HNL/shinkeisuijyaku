@@ -1,8 +1,37 @@
 // うらがわ
 console.log("流石に答えは隠して置きましたよ。")
 const text_img_data = "https://www.instagram.com/p/Bx1IeVkHkem/media/?size=m";
+const all_insta_data = [
+  "Bx3yYOOFM7W",
+  "Bx1IeVkHkem",
+  "Bxt6O6XHhhe",
+  "BxluW6gHg8x",
+  "Bxb36GunYIt",
+  "BxWw03rliYb",
+  "BxTwds8l2-4",
+  "Bw5-F0tFYvE",
+  "Bwvq5Chl_m7",
+  "Bwl0YjBhu9J",
+  "BwgNBrgBflT",
+  "BwONWZ3hCEE",
+  "Bv5kjoylo4B",
+  "Bv28Ds7FSSF",
+  "BvskGYTlo-Q",
+  "BvqDKipFwIR",
+  "BvdHjzznpMV",
+  "BvIuhrXliE4",
+  "BvBQpp4Fk3J",
+  "Bu4xQzXFaXW",
+  "BusNZbLl0B_",
+  "BufZSUblxUQ",
+  "Bua5ul6FpiD",
+  "BtueRUEl0As",
+  "Btfqrf4lPAF"
+]
 const table_data = random_num();
 // console.log(table_data);
+let tesuu = 0;
+const tesuu_ele = document.querySelector("h3");
 const result_eria = document.querySelector(".result");
 const FIRST_BASHO_RESET_OBJECT = [100];
 // 取った番号をここに入れていく
@@ -38,6 +67,8 @@ function click_select(g){
         }else{
           result_eria.textContent = "ざんねん。もういっかいチャレンジだ！"
         }
+        tesuu++;
+        tesuu_ele.innerText = "手数：" + tesuu;
         console.log(first_basho[1]+first_basho[2]+" "+basho[1]+basho[2]+"\n"+"judge:" + judge);
         setTimeout(function(){
           result_eria.textContent = "";
@@ -72,19 +103,38 @@ function get_judge(k){
 }
 
 function random_num(){
-// ランダムでテーブルを作成
+  // ランダムでテーブルを作成
+  
+  // 使う写真のデータをランダムで抽出
+  const img_data = [];
+  for(let i = 0; i < 8; i++){
+    while(1){
+      let img_num = Math.floor(Math.random() * all_insta_data.length)
+      let index_flug = true;
+      for(let j in img_data){
+        if(img_data[j] == all_insta_data[img_num]){
+          index_flug = false;
+          break;
+        }
+      }
+      if(index_flug){
+        img_data.push(all_insta_data[img_num]);
+        break;
+      }
+    }
+  }
   const ret = [["","","",""],["","","",""],["","","",""],["","","",""]];
   const use_num  = [0,0,0,0,0,0,0,0];
-  const img_data = [
-    "Bx3yYOOFM7W",
-    "Bx1IeVkHkem",
-    "Bxt6O6XHhhe",
-    "BxluW6gHg8x",
-    "Bxb36GunYIt",
-    "BxWw03rliYb",
-    "BxTwds8l2-4",
-    "Bw5-F0tFYvE"
-  ];
+  // const img_data = [
+  //   "Bx3yYOOFM7W",
+  //   "Bx1IeVkHkem",
+  //   "Bxt6O6XHhhe",
+  //   "BxluW6gHg8x",
+  //   "Bxb36GunYIt",
+  //   "BxWw03rliYb",
+  //   "BxTwds8l2-4",
+  //   "Bw5-F0tFYvE"
+  // ];
   for(let i = 0; i < 4; i++){
     for(let j = 0; j< 4; j++){
       let num = 0;
@@ -98,5 +148,6 @@ function random_num(){
       ret[i][j] = "https://www.instagram.com/p/" + img_data[num - 1] + "/media/?size=m";
     }
   }
+  console.log(ret);
   return ret;
 }
