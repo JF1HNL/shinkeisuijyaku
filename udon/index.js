@@ -38,7 +38,7 @@ const FIRST_BASHO_RESET_OBJECT = [100];
 const get_num = [];
 const TEMPLATE_IMG_URL = {
   template:"https://cdn.discordapp.com/attachments/496146508815532048/583949384228798465/20190530_09-29-30-5.png",
-  get:"https://cdn.discordapp.com/attachments/496146508815532048/583948566691577866/20190530_09-29-30.png"
+  get:"https://cdn.discordapp.com/attachments/496146508815532048/583987499999952896/20190530_09-29-30.png"
 }
 let first_basho = FIRST_BASHO_RESET_OBJECT;
 // 結果を表示中のときは関数を実行させない。
