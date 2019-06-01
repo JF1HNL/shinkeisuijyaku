@@ -88,7 +88,7 @@ function click_select(g){
             first_doc.src = TEMPLATE_IMG_URL.get;
             doc.src = TEMPLATE_IMG_URL.get;
             if(get_num.length == 8){
-              result_eria.textContent = "ゲームクリア！";
+              result_eria.textContent = "ゲームクリア！　手数：" + tesuu ;
             }
           }else{
             first_doc.src = TEMPLATE_IMG_URL.template;
