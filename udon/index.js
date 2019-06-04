@@ -2,6 +2,8 @@
 console.log("流石に答えは隠して置きましたよ。")
 const text_img_data = "https://www.instagram.com/p/Bx1IeVkHkem/media/?size=m";
 const all_insta_data = [
+  "ByR91bwFA3G", // 6/4のうどん
+  "ByKaxehlmBE",
   "Bx3yYOOFM7W",
   "Bx1IeVkHkem",
   "Bxt6O6XHhhe",
@@ -159,6 +161,5 @@ function random_num(){
       ret[i][j] = "https://www.instagram.com/p/" + img_data[num - 1] + "/media/?size=m";
     }
   }
-  console.log(ret);
   return ret;
 }
